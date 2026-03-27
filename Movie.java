@@ -10,13 +10,13 @@ public class Movie extends Media {
     @Override
     public void printInfo() {
         System.out.println(
-            "Dieser Film namens " +
+            "Du hast den Film " +
                 title +
                 " von " +
                 author +
-                " ist " +
+                ", welcher " +
                 runtime +
-                " Minuten lang."
+                " Minuten lang ist, eingetragen."
         );
     }
 }

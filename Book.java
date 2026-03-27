@@ -10,13 +10,13 @@ public class Book extends Media {
     @Override
     public void printInfo() {
         System.out.println(
-            "Dieses Buch namens " +
+            "Du hast das Buch " +
                 title +
                 " von " +
                 author +
-                " hat " +
+                ", welches " +
                 pages +
-                " Seiten."
+                " Seiten hat, eingetragen."
         );
     }
 }

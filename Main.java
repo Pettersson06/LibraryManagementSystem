@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Möchten Sie einen Film oder ein Buch eintragen?");
         String kindOfMedia = scanner.next();
-        if (kindOfMedia == "Film") {
+        if (kindOfMedia.equals("Film")) {
             System.out.println("Wie heißt der Film den Sie eintragen möchten?");
             String title = scanner.next();
             System.out.println("Wer ist der Autor des Films?");
@@ -18,8 +18,7 @@ public class Main {
             Movie movie = new Movie(title, author, runtime);
             movie.printInfo();
             media.add(movie);
-        } else if (kindOfMedia == "Buch");
-        {
+        } else if (kindOfMedia.equals("Buch")) {
             System.out.println("Wie heißt das Buch das Sie eintragen möchten?");
             String title = scanner.next();
             System.out.println("Wer ist der Autor des Buches?");
