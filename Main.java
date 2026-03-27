@@ -14,8 +14,18 @@ public class Main {
             System.out.println("Wer ist der Autor des Films?");
             String author = scanner.nextLine();
             System.out.println("Wie lange ist der Film in Minuten?");
-            int runtime = scanner.nextInt();
-            scanner.nextLine();
+
+            int runtime = 0;
+            boolean validInput = false;
+            while (!validInput) {
+                try {
+                    runtime = scanner.nextInt();
+                    validInput = true;
+                } catch (Exception e) {
+                    System.out.println("Bitte eine gültige Zahl eingeben!");
+                    scanner.nextLine();
+                }
+            }
             Movie movie = new Movie(title, author, runtime);
             movie.printInfo();
             media.add(movie);
@@ -25,8 +35,17 @@ public class Main {
             System.out.println("Wer ist der Autor des Buches?");
             String author = scanner.nextLine();
             System.out.println("Wie viele Seiten hat das Buch?");
-            int pages = scanner.nextInt();
-            scanner.nextLine();
+            int pages = 0;
+            boolean validInput = false;
+            while (!validInput) {
+                try {
+                    pages = scanner.nextInt();
+                    validInput = true;
+                } catch (Exception e) {
+                    System.out.println("Bitte eine gültige Zahl eingeben!");
+                    scanner.nextLine();
+                }
+            }
             Book book = new Book(title, author, pages);
             book.printInfo();
             media.add(book);
