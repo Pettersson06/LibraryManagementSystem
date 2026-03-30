@@ -16,7 +16,7 @@ public class Movie extends Media {
                 author +
                 ", welcher " +
                 runtime +
-                " Minuten lang ist, eingetragen."
+                " Minuten lang ist, eingetragen!"
         );
     }
 }
